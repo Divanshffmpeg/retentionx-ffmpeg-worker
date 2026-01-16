@@ -2,6 +2,12 @@ import express from "express";
 import { exec } from "child_process";
 
 const app = express();
+app.get("/analyze-silence", (req, res) => {
+  res.json({
+    status: "ok",
+    message: "Analyze silence endpoint is reachable"
+  });
+});
 app.use(express.json());
 
 /**
